@@ -26,7 +26,7 @@ def gerar_pix(user_id: int, valor: float):
         "webhook_secret": WEBHOOK_KEY
     }
     headers = {"Authorization": f"Bearer {EXPFY_API_KEY}"}
-    r = requests.post("https://api.expfy.com/v1/pix", json=payload, headers=headers)
+    r = requests.post("https://expfypay.com/api/v1", json=payload, headers=headers)
     if r.status_code == 200:
         data = r.json()
         return data.get("qr_code_url"), data.get("link_pagamento")
