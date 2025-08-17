@@ -15,7 +15,7 @@ VALOR = 17.90
 # API Key da Expfy
 EXPFY_API_KEY = "sk_7746ecdd7f20b11a1d9c5265a7ecb2c5d34411f506e3446125b4fe830379e7c4"
 
-# URL do Render (troque se mudar o app)
+# URL do Render
 WEBHOOK_URL = "https://bot-expfy.onrender.com"
 
 # Chave secreta para validar notificações da Expfy
@@ -117,15 +117,15 @@ tg_app.add_handler(CommandHandler("comprar", comprar))
 # RODA BOT + WEBHOOK
 # ======================
 if __name__ == "__main__":
-    # Registra rota do webhook da Expfy
+    # Rota do webhook da Expfy
     app = web.Application()
     app.router.add_post("/webhook", expfy_webhook)
 
-    # Inicia o bot do Telegram com webhook
+    # Inicia bot do Telegram no modo webhook
     tg_app.run_webhook(
         listen="0.0.0.0",
         port=int(os.environ.get("PORT", 10000)),
         url_path=TOKEN,
-        webhook_url=f"{WEBHOOK_URL}/{TOKEN},
+        webhook_url=f"{WEBHOOK_URL}/{TOKEN}",
         web_app=app
     )
