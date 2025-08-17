@@ -7,19 +7,19 @@ import os
 # ======================
 # CONFIGURAÇÃO
 # ======================
-TOKEN = "SEU_TOKEN_DO_TELEGRAM"
-LINK_GRUPO = "LINK_DO_GRUPO_PRIVADO"
-PIX_CHAVE = "SUA_CHAVE_PIX"
+TOKEN = "8494152099:AAHhUweW8W9A0R3y_w2Gz2iV5Te0atNmSmc"
+LINK_GRUPO = "https://t.me/+RWq8E624d6E3MzEx"
+PIX_CHAVE = "65996282966"
 VALOR = 17.90
 
 # API Key da Expfy
-EXPFY_API_KEY = "SUA_API_KEY_SECRETA_EXPFY"
+EXPFY_API_KEY = "sk_7746ecdd7f20b11a1d9c5265a7ecb2c5d34411f506e3446125b4fe830379e7c4"
 
 # URL do webhook no Render (substituir após deploy)
-WEBHOOK_URL = "URL_PUBLICA_DO_RENDER/webhook"
+WEBHOOK_URL = "https://bot-expfy.onrender.com"
 
 # Chave secreta definida por você para validar o webhook
-WEBHOOK_KEY = "SUA_CHAVE_SECRETA_DO_WEBHOOK"
+WEBHOOK_KEY = "minha_chave_123"
 
 # Registro de usuários
 usuarios = {}  # user_id -> {"username": str, "confirmado": bool, "pix_link": str, "chat_id": int}
